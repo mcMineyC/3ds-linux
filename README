@@ -1,6 +1,13 @@
 Linux kernel
 ============
 
+This kernel has been ported to the Nintendo 3DS.  To clone, MAKE SURE you add the --depth 1 argument, otherwise the kernel will panic on bootup.
+
+
+
+
+
+
 There are several guides for kernel developers and users. These guides can
 be rendered in a number of formats, like HTML and PDF. Please read
 Documentation/admin-guide/README.rst first.
