@@ -2,9 +2,13 @@ Linux kernel
 ============
 
 This kernel has been ported to the Nintendo 3DS.  To clone, MAKE SURE you add the --depth 1 argument, otherwise the kernel will panic on bootup.
+NOTE: Make sure you have a file named rootfs.cpio.gz in the root directory of this repo that contains the rootfs from buildroot.
 
-
-
+To build, first install the development packages from the following command: 
+sudo apt install git build-essential flex bison gcc-arm-linux-gnueabi libssl-dev bc gcc-arm-none-eabi
+Then, clone the sources: git clone https://github.com/linux-3ds/linux.git --depth=1
+Finally, compile using make:
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- make -j$(nproc) nintendo3ds_defconfig all
 
 
 
